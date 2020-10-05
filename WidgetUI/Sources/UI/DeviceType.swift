@@ -71,7 +71,7 @@ extension UIDevice {
             }
         }
         
-        var modelMap : [ String: DeviceModel ] = [
+        let modelMap : [ String: DeviceModel ] = [
             "i386": .simulator,
             "x86_64": .simulator,
             //iPod

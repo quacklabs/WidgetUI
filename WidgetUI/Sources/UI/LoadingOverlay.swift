@@ -11,7 +11,7 @@ import UIKit
 open class LoadingOverlay {
 
     var overlayView : UIView!
-    var activityIndicator : UIActivityIndicatorView!
+    var activityIndicator : UIActivityIndicatorView
     lazy var title: UILabel! = {
         let title = UILabel(frame: .zero)
         title.text = "Please wait..."
@@ -49,10 +49,9 @@ open class LoadingOverlay {
         self.activityIndicator = UIActivityIndicatorView(frame: .zero)
         self.activityIndicator.translatesAutoresizingMaskIntoConstraints = false
         self.activityIndicator.clipsToBounds = true
-        self.activityIndicator.style = .whiteLarge
         self.activityIndicator.color = .gray
         
-        titleView.addSubviews([self.activityIndicator, title])
+        titleView.addSubviews([activityIndicator, title!])
         
         overlayView.addSubview(titleView)
         NSLayoutConstraint.activate([
