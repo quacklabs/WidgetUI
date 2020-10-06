@@ -22,7 +22,7 @@
 		2545D48C24D4D60C0022DD8B /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2545D48524D4D60C0022DD8B /* Colors.swift */; };
 		2545D48D24D4D60C0022DD8B /* DeviceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2545D48624D4D60C0022DD8B /* DeviceType.swift */; };
 		2545D48E24D4D60C0022DD8B /* LoadingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2545D48724D4D60C0022DD8B /* LoadingOverlay.swift */; };
-		2545D48F24D4D60C0022DD8B /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2545D48824D4D60C0022DD8B /* Text.swift */; };
+		2545D48F24D4D60C0022DD8B /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2545D48824D4D60C0022DD8B /* Label.swift */; };
 		2545D49024D4D60C0022DD8B /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2545D48924D4D60C0022DD8B /* Date.swift */; };
 		25A3197E2477C3950006022F /* WidgetUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25A319742477C3950006022F /* WidgetUI.framework */; };
 		25A319832477C3950006022F /* WidgetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A319822477C3950006022F /* WidgetUITests.swift */; };
@@ -55,7 +55,7 @@
 		2545D48524D4D60C0022DD8B /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		2545D48624D4D60C0022DD8B /* DeviceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceType.swift; sourceTree = "<group>"; };
 		2545D48724D4D60C0022DD8B /* LoadingOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingOverlay.swift; sourceTree = "<group>"; };
-		2545D48824D4D60C0022DD8B /* Text.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
+		2545D48824D4D60C0022DD8B /* Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 		2545D48924D4D60C0022DD8B /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		25A319742477C3950006022F /* WidgetUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WidgetUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		25A319772477C3950006022F /* WidgetUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WidgetUI.h; sourceTree = "<group>"; };
@@ -119,7 +119,7 @@
 				2545D48624D4D60C0022DD8B /* DeviceType.swift */,
 				2545D48724D4D60C0022DD8B /* LoadingOverlay.swift */,
 				2545D48324D4D60C0022DD8B /* NSMutableAttributedString.swift */,
-				2545D48824D4D60C0022DD8B /* Text.swift */,
+				2545D48824D4D60C0022DD8B /* Label.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -282,7 +282,7 @@
 				2545D47B24D4D4900022DD8B /* UIImage.swift in Sources */,
 				2545D48E24D4D60C0022DD8B /* LoadingOverlay.swift in Sources */,
 				2545D47C24D4D4900022DD8B /* UIButton.swift in Sources */,
-				2545D48F24D4D60C0022DD8B /* Text.swift in Sources */,
+				2545D48F24D4D60C0022DD8B /* Label.swift in Sources */,
 				2545D48C24D4D60C0022DD8B /* Colors.swift in Sources */,
 				2545D48B24D4D60C0022DD8B /* Checkbox.swift in Sources */,
 				2545D47924D4D4900022DD8B /* Codable.swift in Sources */,

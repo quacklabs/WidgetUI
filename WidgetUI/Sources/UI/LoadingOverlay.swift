@@ -12,9 +12,9 @@ open class LoadingOverlay {
 
     var overlayView : UIView!
     var activityIndicator : UIActivityIndicatorView
-    lazy var title: UILabel! = {
-        let title = UILabel(frame: .zero)
-        title.text = "Please wait..."
+    lazy var title: Label! = {
+        let title = Label()
+        title.content = "Please wait..."
         title.textColor = UIColor.black
         title.willSetContraints()
         title.sizeToFit()

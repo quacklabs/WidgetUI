@@ -2,8 +2,8 @@
 //  DeviceType.swift
 //  PartyWise
 //
-//  Created by Sprinthub on 20/02/2020.
-//  Copyright © 2020 Sprinthub Mobile. All rights reserved.
+//  Created by Mark Boleigha on 31/07/2020.
+//  Copyright © 2020 Sprinthub. MIT License
 //
 
 import UIKit

@@ -2,8 +2,8 @@
 //  UIViewController.swift
 //  PartyWise
 //
-//  Created by Sprinthub on 18/02/2020.
-//  Copyright © 2020 Sprinthub Mobile. All rights reserved.
+//  Created by Mark Boleigha on 31/07/2020.
+//  Copyright © 2020 Sprinthub. MIT License
 //
 
 import UIKit
@@ -69,7 +69,7 @@ extension UIViewController {
         backButton.isUserInteractionEnabled = true
         (tintColor != nil) ? backButton.tintColor = tintColor! : ()
         backButton.willSetContraints()
-        let title = Text(font: Font.heading.make(withSize: 18), content: title?.attributed ?? "".attributed, color: Colors.black)
+        let title = Label(font: Font.heading.make(withSize: 18), content: title?.attributed ?? "".attributed, color: Colors.black)
         title.sizeToFit()
         backView.addSubviews([backButton, title])
         view.addSubview(backView)
@@ -184,7 +184,7 @@ extension UIViewController {
             if self.navigationController?.navigationBar != nil {
                 navigationItem.title = title
             } else {
-                let viewTitle = Text(font: Font.heading.make(withSize: 20).semibold, content: NSMutableAttributedString(string: title), color: Colors.darkPurple)
+                let viewTitle = Label(font: Font.heading.make(withSize: 20).semibold, content: NSMutableAttributedString(string: title), color: Colors.darkPurple)
                 self.view.addSubview(viewTitle)
                 NSLayoutConstraint.activate([
                     viewTitle.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),

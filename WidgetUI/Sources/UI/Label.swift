@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Text: UILabel {
+class Label: UILabel {
     
     var content: String?
     var attributes: [NSAttributedString.Key: Any] = [NSAttributedString.Key: Any]()
