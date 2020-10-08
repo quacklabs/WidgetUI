@@ -9,7 +9,7 @@
 import UIKit
 import ImageIO
 
-extension UIImage {
+public extension UIImage {
     func resize(to size: CGSize) -> UIImage {
         return UIGraphicsImageRenderer(size: size).image { _ in
             draw(in: CGRect(origin: .zero, size: size))

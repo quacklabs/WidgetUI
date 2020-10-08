@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Array {
+public extension Array {
     public mutating func appendDistinct<S>(contentsOf newElements: S, where condition:@escaping (Element, Element) -> Bool) where S : Sequence, Element == S.Element {
         newElements.forEach { (item) in
             if !(self.contains(where: { (selfItem) -> Bool in
@@ -20,7 +20,7 @@ extension Array {
     }
 }
 
-extension Array where Element: Hashable {
+public extension Array where Element: Hashable {
     func removingDuplicates() -> [Element] {
         var set = Set<Element>()
         var filteredArray = Array<Element>()

@@ -36,7 +36,7 @@ public enum Font {
 }
 
 
-extension UIFont {
+public extension UIFont {
     var bold: UIFont { return withWeight(.bold) }
     var semibold: UIFont { return withWeight(.semibold) }
     var medium: UIFont { return withWeight(.medium) }

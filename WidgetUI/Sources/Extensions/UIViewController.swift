@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIViewController {
+public extension UIViewController {
     
     public enum AlertType: String, CaseIterable {
         case success = "Success"

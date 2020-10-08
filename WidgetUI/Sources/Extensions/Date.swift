@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Date {
+public extension Date {
     func daysFromToday() -> Int {
       return abs(Calendar.current.dateComponents([.day], from: self, to: Date()).day!)
     }
