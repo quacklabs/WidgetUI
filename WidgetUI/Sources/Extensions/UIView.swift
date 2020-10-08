@@ -23,6 +23,16 @@ public extension UIView {
         self.clipsToBounds = true
     }
     
+    func hideKeyboardOnTap() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.hideKeyboard))
+        tap.cancelsTouchesInView = false
+        self.addGestureRecognizer(tap)
+    }
+    
+    @objc func hideKeyboard() {
+        self.endEditing(true)
+    }
+    
     func addSubviews(_ views: [Any]) {
         for view in views {
             self.addSubview(view as! UIView)
