@@ -10,7 +10,7 @@ import UIKit
 
 extension UIViewController {
     
-    enum AlertType: String, CaseIterable {
+    public enum AlertType: String, CaseIterable {
         case success = "Success"
         case error = "Error"
         case ok = "Ok"
@@ -164,12 +164,12 @@ extension UIViewController {
 //        
 //    }
     
-    func wrapInNavigation() -> UINavigationController {
+    public func wrapInNavigation() -> UINavigationController {
 //        self.navigationController?.navigationBar.isHidden = true
         return UINavigationController(rootViewController: self)
     }
     
-    func showAlert(type: AlertType, title: String? = nil, message: String, completion: ((UIAlertAction) -> Void)? = nil) {
+    public func showAlert(type: AlertType, title: String? = nil, message: String, completion: ((UIAlertAction) -> Void)? = nil) {
         let alert = UIAlertController(title: title ?? type.rawValue, message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: AlertType.ok.rawValue, style: type.style, handler: completion)
         
@@ -179,7 +179,7 @@ extension UIViewController {
         }
     }
     
-    func setTitle(title: String) {
+    public func setTitle(title: String) {
         if self.isModal {
             if self.navigationController?.navigationBar != nil {
                 navigationItem.title = title
