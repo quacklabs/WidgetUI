@@ -18,7 +18,7 @@ public extension UIView {
         self.clipsToBounds = false
     }
     
-    func willSetContraints() {
+    func willSetConstraints() {
         self.translatesAutoresizingMaskIntoConstraints = false
         self.clipsToBounds = true
     }

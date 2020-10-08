@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension NSMutableAttributedString {
+public extension NSMutableAttributedString {
     
     func withAttributes(attributes: [NSRange : [NSAttributedString.Key: AnyHashable]]) -> NSMutableAttributedString {
         attributes.forEach({

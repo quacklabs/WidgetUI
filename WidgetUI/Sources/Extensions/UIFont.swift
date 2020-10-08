@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum Font {
+public enum Font {
     case heading
     case body
     
@@ -25,12 +25,12 @@ enum Font {
         return self.make()
     }
     
-    func make(withSize: CGFloat? = 14) -> UIFont {
+    func make(font: String? = nil, withSize: CGFloat? = 14) -> UIFont {
         switch self {
         case .heading:
-            return UIFont(name: "SF Pro Display", size: withSize ?? 36)!
+            return UIFont(name: font ?? "SF Pro Display", size: withSize ?? 36)!
         case .body:
-            return UIFont(name: "SF Pro Text", size: withSize!)!
+            return UIFont(name: font ?? "SF Pro Text", size: withSize!)!
         }
     }
 }

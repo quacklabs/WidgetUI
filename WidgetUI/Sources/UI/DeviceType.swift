@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum DeviceModel: String {
+public enum DeviceModel: String {
     case simulator     = "simulator/sandbox",
     //iPod
     iPod1              = "iPod 1",

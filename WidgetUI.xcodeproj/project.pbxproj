@@ -19,7 +19,6 @@
 		2545D47F24D4D4900022DD8B /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2545D47524D4D4900022DD8B /* UIColor.swift */; };
 		2545D48A24D4D60C0022DD8B /* NSMutableAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2545D48324D4D60C0022DD8B /* NSMutableAttributedString.swift */; };
 		2545D48B24D4D60C0022DD8B /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2545D48424D4D60C0022DD8B /* Checkbox.swift */; };
-		2545D48C24D4D60C0022DD8B /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2545D48524D4D60C0022DD8B /* Colors.swift */; };
 		2545D48D24D4D60C0022DD8B /* DeviceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2545D48624D4D60C0022DD8B /* DeviceType.swift */; };
 		2545D48E24D4D60C0022DD8B /* LoadingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2545D48724D4D60C0022DD8B /* LoadingOverlay.swift */; };
 		2545D48F24D4D60C0022DD8B /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2545D48824D4D60C0022DD8B /* Label.swift */; };
@@ -52,7 +51,6 @@
 		2545D47524D4D4900022DD8B /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		2545D48324D4D60C0022DD8B /* NSMutableAttributedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedString.swift; sourceTree = "<group>"; };
 		2545D48424D4D60C0022DD8B /* Checkbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
-		2545D48524D4D60C0022DD8B /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		2545D48624D4D60C0022DD8B /* DeviceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceType.swift; sourceTree = "<group>"; };
 		2545D48724D4D60C0022DD8B /* LoadingOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingOverlay.swift; sourceTree = "<group>"; };
 		2545D48824D4D60C0022DD8B /* Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
@@ -115,7 +113,6 @@
 			isa = PBXGroup;
 			children = (
 				2545D48424D4D60C0022DD8B /* Checkbox.swift */,
-				2545D48524D4D60C0022DD8B /* Colors.swift */,
 				2545D48624D4D60C0022DD8B /* DeviceType.swift */,
 				2545D48724D4D60C0022DD8B /* LoadingOverlay.swift */,
 				2545D48324D4D60C0022DD8B /* NSMutableAttributedString.swift */,
@@ -283,7 +280,6 @@
 				2545D48E24D4D60C0022DD8B /* LoadingOverlay.swift in Sources */,
 				2545D47C24D4D4900022DD8B /* UIButton.swift in Sources */,
 				2545D48F24D4D60C0022DD8B /* Label.swift in Sources */,
-				2545D48C24D4D60C0022DD8B /* Colors.swift in Sources */,
 				2545D48B24D4D60C0022DD8B /* Checkbox.swift in Sources */,
 				2545D47924D4D4900022DD8B /* Codable.swift in Sources */,
 				2545D47624D4D4900022DD8B /* UIFont.swift in Sources */,

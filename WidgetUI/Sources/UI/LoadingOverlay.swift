@@ -16,7 +16,7 @@ open class LoadingOverlay {
         let title = Label()
         title.content = "Please wait..."
         title.textColor = UIColor.black
-        title.willSetContraints()
+        title.willSetConstraints()
         title.sizeToFit()
         return title
     }()
@@ -25,7 +25,7 @@ open class LoadingOverlay {
         let titleView = UIView(frame: .zero)
         titleView.layer.backgroundColor = UIColor.white.cgColor
         titleView.layer.cornerRadius = 10
-        titleView.willSetContraints()
+        titleView.willSetConstraints()
         return titleView
     }()
     

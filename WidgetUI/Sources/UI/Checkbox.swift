@@ -64,7 +64,7 @@ public class Checkbox: UIControl {
         let icon = UIImageView(image: UIImage(named: "ic_checkmark")?.withRenderingMode(.alwaysTemplate).withAlignmentRectInsets(UIEdgeInsets(top: -9, left: -9, bottom: -9, right: -9)))
 //        icon.contentV
         icon.contentMode = .scaleAspectFit
-        icon.willSetContraints()
+        icon.willSetConstraints()
         return icon
     }()
 

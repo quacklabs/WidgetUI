@@ -61,15 +61,15 @@ extension UIViewController {
 //        let view = view as! UIView!
         self.navigationController?.navigationBar.isHidden = true
         let backView = UIView(frame: .zero)
-        backView.willSetContraints()
+        backView.willSetConstraints()
         let backButton = UIImageView(image: UIImage(named: "ic_back")?.withRenderingMode(tintColor != nil ? .alwaysTemplate : .automatic))
         backButton.contentMode = .scaleAspectFit
         backButton.heightAnchor.constraint(equalToConstant: 20).isActive = true
         backButton.widthAnchor.constraint(equalToConstant: 20).isActive = true
         backButton.isUserInteractionEnabled = true
         (tintColor != nil) ? backButton.tintColor = tintColor! : ()
-        backButton.willSetContraints()
-        let title = Label(font: Font.heading.make(withSize: 18), content: title?.attributed ?? "".attributed, color: Colors.black)
+        backButton.willSetConstraints()
+        let title = Label(font: Font.heading.make(withSize: 18), content: title?.attributed ?? "".attributed, color: .black)
         title.sizeToFit()
         backView.addSubviews([backButton, title])
         view.addSubview(backView)
@@ -97,7 +97,7 @@ extension UIViewController {
         backButton.heightAnchor.constraint(equalToConstant: 20).isActive = true
         backButton.widthAnchor.constraint(equalToConstant: 20).isActive = true
         backButton.addTarget(self, action: #selector(self.back), for: .touchUpInside)
-        backButton.willSetContraints()
+        backButton.willSetConstraints()
         
         if self.isModal {
             if self.navigationController?.navigationBar != nil {
@@ -184,7 +184,7 @@ extension UIViewController {
             if self.navigationController?.navigationBar != nil {
                 navigationItem.title = title
             } else {
-                let viewTitle = Label(font: Font.heading.make(withSize: 20).semibold, content: NSMutableAttributedString(string: title), color: Colors.darkPurple)
+                let viewTitle = Label(font: Font.heading.make(withSize: 20).semibold, content: NSMutableAttributedString(string: title), color: .black)
                 self.view.addSubview(viewTitle)
                 NSLayoutConstraint.activate([
                     viewTitle.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
