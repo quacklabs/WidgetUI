@@ -53,10 +53,19 @@ public extension UIView {
          self.layer.mask = mask
     }
     
-    func setGradientBackground(gradientTop: CGColor, gradientBottom: CGColor, opacity: Float? = 1) {
+    func setGradientBackground(colors: [CGColor], opacity: Float? = 1) {
+        let locations: [NSNumber]!
+        switch colors.count {
+        case 2:
+            locations = [0, 1]
+        case 3:
+            locations = [0, 0.19, 0.83]
+        default:
+            locations = [0, 1]
+        }
         let gradientLayer = CAGradientLayer()
-        gradientLayer.colors = [gradientTop, gradientBottom]
-        gradientLayer.locations = [0.0, 1.0]
+        gradientLayer.colors = colors
+        gradientLayer.locations = locations
         gradientLayer.frame = self.bounds
         gradientLayer.opacity = opacity!
 
