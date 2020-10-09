@@ -90,7 +90,6 @@ public extension UIViewController {
     func addBackButton(icon: UIImage? = nil) {
         let backButton = UIButton(type: .custom)
         backButton.setImage(icon ?? UIImage(named: "ic_back"), for: .normal)
-//        backButton.imageEdgeInsets = UIEdgeInsets(top: -1, left: -1, bottom: -1, right: -1)
         backButton.imageView?.contentMode = .scaleAspectFit
         backButton.contentVerticalAlignment = .fill
         backButton.contentHorizontalAlignment = .fill
