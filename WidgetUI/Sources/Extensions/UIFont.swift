@@ -44,6 +44,7 @@ public extension UIFont {
     var light: UIFont { return withWeight(.light) }
     var heavy: UIFont { return withWeight(.heavy) }
     var italic: UIFont { return withTraits(traits: .traitItalic)}
+//    var extraBold: UIFont { return withTraits(traits: .tra)}
     
     func withWeight(_ weight: UIFont.Weight) -> UIFont {
         var attributes = fontDescriptor.fontAttributes

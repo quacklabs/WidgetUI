@@ -32,8 +32,7 @@ public class Label: UILabel {
     
     convenience init(font: UIFont? = Font.body.make, content: NSMutableAttributedString?, color: UIColor? = .black) {
         self.init(frame: .zero)
-        self.translatesAutoresizingMaskIntoConstraints = false
-        self.clipsToBounds = true
+        self.willSetConstraints()
         self.font = font!.dynamicSized()
         self.textColor = color
         self.lineBreakMode = .byWordWrapping
