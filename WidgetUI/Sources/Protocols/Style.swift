@@ -9,5 +9,5 @@
 import UIKit
 
 protocol Style {
-    static func font() -> UIFont
+    static func font() -> String
 }
