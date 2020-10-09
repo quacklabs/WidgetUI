@@ -8,10 +8,15 @@
 
 import UIKit
 
+@IBDesignable
 public class Label: UILabel {
     
-    var content: String?
-    var attributes: [NSAttributedString.Key: Any] = [NSAttributedString.Key: Any]()
+    public var content: String? {
+        didSet {
+            self.draw(self.frame)
+        }
+    }
+    public var attributes: [NSAttributedString.Key: Any] = [NSAttributedString.Key: Any]()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
