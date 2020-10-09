@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Label: UILabel {
+public class Label: UILabel {
     
     var content: String?
     var attributes: [NSAttributedString.Key: Any] = [NSAttributedString.Key: Any]()
@@ -21,7 +21,7 @@ class Label: UILabel {
         super.init(coder: coder)
     }
     
-    override func draw(_ rect: CGRect) {
+    override public func draw(_ rect: CGRect) {
         super.drawText(in: rect)
     }
     
@@ -39,7 +39,5 @@ class Label: UILabel {
         content?.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSRange(location: 0, length: content!.length))
         self.attributedText = content
         self.setNeedsDisplay()
-        
     }
-
 }
