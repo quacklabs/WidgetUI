@@ -197,4 +197,12 @@ public extension UIViewController {
         }
     }
     
+//    static func loadFromNib(name: String) -> UIView {
+//        let bundle = Bundle.main
+//        let nib = UINib(nibName: name, bundle: bundle)
+//        let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
+//        return view
+//    }
+//
+    
 }

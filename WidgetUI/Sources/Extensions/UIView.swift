@@ -53,7 +53,7 @@ public extension UIView {
          self.layer.mask = mask
     }
     
-    func setGradientBackground(colors: [CGColor], opacity: Float? = 1) {
+    func setGradientBackground(colors: [CGColor], opacity: Float? = 1.0) {
         let locations: [NSNumber]!
         switch colors.count {
         case 2:
