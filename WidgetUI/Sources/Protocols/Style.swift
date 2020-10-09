@@ -8,6 +8,6 @@
 
 import UIKit
 
-protocol Style {
-    static func font() -> String
+public protocol Style {
+    static func font(type: Font?) -> String
 }
