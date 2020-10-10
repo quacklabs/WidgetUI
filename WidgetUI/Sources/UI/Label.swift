@@ -13,10 +13,22 @@ public class Label: UILabel {
     
     public var content: String? {
         didSet {
+            self.attributedText = self.content?.attributed
             self.draw(self.frame)
         }
     }
-    public var attributes: [NSAttributedString.Key: Any] = [NSAttributedString.Key: Any]()
+    
+    @IBInspectable
+    public var _font: UIFont = UIFont.systemFont(ofSize: 17) {
+        didSet {
+            self.font = Font.body.make(font: _font.fontName, withSize: _font.pointSize)
+        }
+    }
+    public var attributes: [NSAttributedString.Key: Any] = [NSAttributedString.Key: Any]() {
+        didSet {
+//            self.content?.a
+        }
+    }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -30,11 +42,11 @@ public class Label: UILabel {
         super.drawText(in: rect)
     }
     
-    convenience init(font: UIFont? = Font.body.make, content: NSMutableAttributedString?, color: UIColor? = .black) {
+    public convenience init(font: UIFont?, content: NSMutableAttributedString?, color: UIColor?) {
         self.init(frame: .zero)
         self.willSetConstraints()
-        self.font = font!.dynamicSized()
-        self.textColor = color
+        self.font = font?.dynamicSized() ?? UIFont.systemFont(ofSize: 14).dynamicSized()
+        self.textColor = color ?? textColor
         self.lineBreakMode = .byWordWrapping
         self.numberOfLines = 0
         

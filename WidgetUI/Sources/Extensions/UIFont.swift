@@ -28,9 +28,9 @@ public enum Font {
     public func make(font: String? = nil, withSize: CGFloat? = 14) -> UIFont {
         switch self {
         case .heading:
-            return UIFont(name: font ?? "SF Pro Display", size: withSize ?? 36)!
+            return (font != nil) ? UIFont(name: font!, size: withSize ?? 36)! : UIFont.systemFont(ofSize: withSize ?? 36)
         case .body:
-            return UIFont(name: font ?? "SF Pro Text", size: withSize!)!
+            return (font != nil) ? UIFont(name: font!, size: withSize!)! : UIFont.systemFont(ofSize: withSize!)
         }
     }
 }

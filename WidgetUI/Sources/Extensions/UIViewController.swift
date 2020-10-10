@@ -10,7 +10,7 @@ import UIKit
 
 public extension UIViewController {
     
-    public enum AlertType: String, CaseIterable {
+    enum AlertType: String, CaseIterable {
         case success = "Success"
         case error = "Error"
         case ok = "Ok"
@@ -58,14 +58,13 @@ public extension UIViewController {
     }
     
     func customBackButton(title: String?, tintColor: UIColor? = nil, in view: UIView) {
-//        let view = view as! UIView!
         self.navigationController?.navigationBar.isHidden = true
         let backView = UIView(frame: .zero)
         backView.willSetConstraints()
         let backButton = UIImageView(image: UIImage(named: "ic_back")?.withRenderingMode(tintColor != nil ? .alwaysTemplate : .automatic))
         backButton.contentMode = .scaleAspectFit
-        backButton.heightAnchor.constraint(equalToConstant: 20).isActive = true
-        backButton.widthAnchor.constraint(equalToConstant: 20).isActive = true
+        backButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        backButton.widthAnchor.constraint(equalToConstant: 30).isActive = true
         backButton.isUserInteractionEnabled = true
         (tintColor != nil) ? backButton.tintColor = tintColor! : ()
         backButton.willSetConstraints()
@@ -75,14 +74,15 @@ public extension UIViewController {
         view.addSubview(backView)
         NSLayoutConstraint.activate([
             backView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 23),
-            backView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 23),
-            backView.heightAnchor.constraint(equalToConstant: 23),
-            backView.widthAnchor.constraint(equalToConstant: 30),
+            backView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
+            backView.heightAnchor.constraint(equalToConstant: 30),
+            backView.widthAnchor.constraint(greaterThanOrEqualToConstant: 30),
             backButton.leadingAnchor.constraint(equalTo: backView.leadingAnchor),
             backButton.topAnchor.constraint(equalTo: backView.topAnchor, constant: 1.5),
             title.centerYAnchor.constraint(equalTo: backButton.centerYAnchor),
             title.leadingAnchor.constraint(equalTo: backButton.trailingAnchor, constant: 9.5),
         ])
+        backButton.sizeToFit()
         
         backView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.back)))
     }
@@ -163,12 +163,12 @@ public extension UIViewController {
 //        
 //    }
     
-    public func wrapInNavigation() -> UINavigationController {
+    func wrapInNavigation() -> UINavigationController {
 //        self.navigationController?.navigationBar.isHidden = true
         return UINavigationController(rootViewController: self)
     }
     
-    public func showAlert(type: AlertType, title: String? = nil, message: String, completion: ((UIAlertAction) -> Void)? = nil) {
+    func showAlert(type: AlertType, title: String? = nil, message: String, completion: ((UIAlertAction) -> Void)? = nil) {
         let alert = UIAlertController(title: title ?? type.rawValue, message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: AlertType.ok.rawValue, style: type.style, handler: completion)
         
@@ -178,7 +178,7 @@ public extension UIViewController {
         }
     }
     
-    public func setTitle(title: String) {
+    func setTitle(title: String) {
         if self.isModal {
             if self.navigationController?.navigationBar != nil {
                 navigationItem.title = title

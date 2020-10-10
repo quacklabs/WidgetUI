@@ -35,7 +35,21 @@ open class LoadingOverlay {
         }
     }
     
-    class var instance: LoadingOverlay {
+    public var customAnimation: UIView? {
+        didSet {
+            titleView.removeFromSuperview()
+            overlayView.addSubview(customAnimation!)
+            customAnimation?.center = overlayView.center
+        }
+    }
+    
+    public var background: UIColor? {
+        didSet {
+            self.overlayView.backgroundColor = background
+        }
+    }
+    
+    public class var instance: LoadingOverlay {
         struct Static {
             static let instance: LoadingOverlay = LoadingOverlay()
         }

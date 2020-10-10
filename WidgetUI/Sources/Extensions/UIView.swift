@@ -47,10 +47,10 @@ public extension UIView {
     }
     
     func roundCorners(_ corners: UIRectCorner, radius: CGFloat) {
-         let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
-         let mask = CAShapeLayer()
-         mask.path = path.cgPath
-         self.layer.mask = mask
+        let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        let mask = CAShapeLayer()
+        mask.path = path.cgPath
+        self.layer.mask = mask
     }
     
     func setGradientBackground(colors: [CGColor], opacity: Float? = 1.0) {
@@ -64,14 +64,27 @@ public extension UIView {
             locations = [0, 1]
         }
         let gradientLayer = CAGradientLayer()
+        gradientLayer.name = "background"
         gradientLayer.colors = colors
         gradientLayer.locations = locations
         gradientLayer.frame = self.bounds
         gradientLayer.opacity = opacity!
-
-        self.layer.insertSublayer(gradientLayer, at:0)
+        
+        self.layer.insertSublayer(gradientLayer, at: 0)
         self.layer.setNeedsDisplay()
     }
+    
+    func removeGradientBackground() {
+        if let subLayers = self.layer.sublayers {
+            for layer in subLayers {
+                if layer.name == "background" {
+                    layer.removeFromSuperlayer()
+                    self.layoutIfNeeded()
+                }
+            }
+        }
+    }
+    
     
     func addBorder(_ edge: UIRectEdge, color: UIColor, thickness: CGFloat) {
         let subview = UIView()
