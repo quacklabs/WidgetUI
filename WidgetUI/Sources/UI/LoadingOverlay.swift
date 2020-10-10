@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Lottie
 
 open class LoadingOverlay {
 
@@ -35,7 +36,7 @@ open class LoadingOverlay {
         }
     }
     
-    public var customAnimation: UIView? {
+    public var customAnimation: AnimationView? {
         didSet {
             titleView.removeFromSuperview()
             overlayView.addSubview(customAnimation!)
@@ -85,12 +86,16 @@ open class LoadingOverlay {
     public func showOverlay(view: UIView, title: String? = nil) {
         (title != nil) ? self.title.text = title : ()
         overlayView.center = view.center
+        overlayView.frame = view.bounds
         
         view.addSubview(overlayView)
+        
+        customAnimation?.play()
         activityIndicator.startAnimating()
     }
 
     public func hideOverlayView() {
+        customAnimation?.stop()
         activityIndicator.stopAnimating()
         overlayView.removeFromSuperview()
     }
