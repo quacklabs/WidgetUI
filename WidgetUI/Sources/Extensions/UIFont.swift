@@ -90,11 +90,11 @@ public extension UIFont {
              .iPhone4S, .simulator, .unrecognized:
             calculatedFont = self
         case .iPhone6, .iPhone6S, .iPhone7, .iPhone8:
-            calculatedFont = UIFont(name: currentFontName, size: fontSize * 1.08)!.withWeight(weight)
+            calculatedFont = UIFont(name: currentFontName, size: fontSize * 0.8)!.withWeight(weight)
         case .iPhone6plus, .iPhone6Splus, .iPhone7plus,
              .iPhone8plus, .iPhoneX, .iPhoneXR, .iPhoneXS,
              .iPhoneXSMax:
-            calculatedFont = UIFont(name: currentFontName, size: fontSize * 1.07)!.withWeight(weight)
+            calculatedFont = UIFont(name: currentFontName, size: fontSize * 1.3)!.withWeight(weight)
         case .iPad2, .iPad3, .iPad4, .iPad5, .iPad6, .iPadAir, .iPadMini,
              .iPadPro2_12_9, .iPadAir2, .iPadMini2, .iPadMini3, .iPadMini4,
              .iPadPro9_7, .iPadPro10_5, .iPadPro12_9:

@@ -15,7 +15,7 @@ open class LoadingOverlay {
     var activityIndicator : UIActivityIndicatorView
     lazy var title: Label! = {
         let title = Label()
-        title.content = "Please wait..."
+        title.content = "Please wait...".attributed
         title.textColor = UIColor.black
         title.willSetConstraints()
         title.sizeToFit()
@@ -38,15 +38,14 @@ open class LoadingOverlay {
     
     public var customAnimation: AnimationView? {
         didSet {
-            titleView.removeFromSuperview()
-            overlayView.addSubview(customAnimation!)
-            customAnimation?.center = overlayView.center
+            addCustomAnimation()
         }
     }
     
     public var background: UIColor? {
         didSet {
-            self.overlayView.backgroundColor = background
+            self.overlayView.layer.backgroundColor = background?.cgColor
+            self.overlayView.setNeedsDisplay()
         }
     }
     
@@ -59,7 +58,6 @@ open class LoadingOverlay {
 
     init(){
         self.overlayView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
-        overlayView.backgroundColor = UIColor.black.withAlphaComponent(0.65)
         
         self.activityIndicator = UIActivityIndicatorView(frame: .zero)
         self.activityIndicator.translatesAutoresizingMaskIntoConstraints = false
@@ -87,6 +85,7 @@ open class LoadingOverlay {
         (title != nil) ? self.title.text = title : ()
         overlayView.center = view.center
         overlayView.frame = view.bounds
+        overlayView.backgroundColor = self.background ?? UIColor.black.withAlphaComponent(0.65)
         
         view.addSubview(overlayView)
         
@@ -98,6 +97,18 @@ open class LoadingOverlay {
         customAnimation?.stop()
         activityIndicator.stopAnimating()
         overlayView.removeFromSuperview()
+    }
+    
+    private func addCustomAnimation() {
+        customAnimation?.willSetConstraints()
+        titleView.removeFromSuperview()
+        overlayView.addSubview(customAnimation!)
+        customAnimation?.center = overlayView.center
+        customAnimation?.heightAnchor.constraint(equalToConstant: 80).isActive = true
+        customAnimation?.widthAnchor.constraint(equalToConstant: 80).isActive = true
+        customAnimation?.centerYAnchor.constraint(equalTo: overlayView.centerYAnchor).isActive = true
+        customAnimation?.centerXAnchor.constraint(equalTo: overlayView.centerXAnchor).isActive = true
+        self.overlayView.layoutIfNeeded()
     }
 }
 

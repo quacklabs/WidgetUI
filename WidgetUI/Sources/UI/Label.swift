@@ -11,9 +11,9 @@ import UIKit
 @IBDesignable
 public class Label: UILabel {
     
-    public var content: String? {
+    public var content: NSMutableAttributedString? {
         didSet {
-            self.attributedText = self.content?.attributed
+            self.attributedText = self.content
             self.draw(self.frame)
         }
     }
@@ -24,6 +24,8 @@ public class Label: UILabel {
             self.font = Font.body.make(font: _font.fontName, withSize: _font.pointSize)
         }
     }
+    
+    @IBInspectable
     public var attributes: [NSAttributedString.Key: Any] = [NSAttributedString.Key: Any]() {
         didSet {
 //            self.content?.a
@@ -39,6 +41,7 @@ public class Label: UILabel {
     }
     
     override public func draw(_ rect: CGRect) {
+//        self.font = self.font?.dynamicSized()
         super.drawText(in: rect)
     }
     
