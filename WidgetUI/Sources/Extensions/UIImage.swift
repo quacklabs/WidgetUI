@@ -16,6 +16,13 @@ public extension UIImage {
         }
     }
     
+    func resize(to: (Double, Double)) -> UIImage {
+        let size = CGSize(width: to.0, height: to.1)
+        return UIGraphicsImageRenderer(size: size).image { _ in
+            draw(in: CGRect(origin: .zero, size: size))
+        }
+    }
+    
     convenience init?(withContentsOfUrl url: URL) throws {
         let imageData = try Data(contentsOf: url)
     
