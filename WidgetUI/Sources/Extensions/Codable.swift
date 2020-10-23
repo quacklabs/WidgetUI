@@ -25,7 +25,7 @@ public extension Encodable {
     }
 }
 
-extension Dictionary {
+public extension Dictionary {
     func object<T: Codable>(type: T.Type) throws -> T? {
         guard let data = try? JSONSerialization.data(withJSONObject: self, options: [.fragmentsAllowed, .prettyPrinted]) else {
             return nil
