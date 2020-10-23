@@ -25,3 +25,16 @@ public extension Encodable {
     }
 }
 
+extension Dictionary {
+    func customCodableObject<T: Codable>(type: T.Type) throws -> T? {
+        guard let data = try? JSONSerialization.data(withJSONObject: self, options: [.fragmentsAllowed, .prettyPrinted]) else {
+            return nil
+        }
+        let decoder = JSONDecoder()
+        guard let obj = try? decoder.decode(T.self, from: data) else {
+            return nil
+        }
+        return obj
+    }
+}
+
