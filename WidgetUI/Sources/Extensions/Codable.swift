@@ -26,7 +26,7 @@ public extension Encodable {
 }
 
 extension Dictionary {
-    func customCodableObject<T: Codable>(type: T.Type) throws -> T? {
+    func object<T: Codable>(type: T.Type) throws -> T? {
         guard let data = try? JSONSerialization.data(withJSONObject: self, options: [.fragmentsAllowed, .prettyPrinted]) else {
             return nil
         }
@@ -35,6 +35,22 @@ extension Dictionary {
             return nil
         }
         return obj
+    }
+    
+    func objects<T: Codable>(type: T.Type) throws -> [T]? {
+        var items = [T]()
+        
+        self.forEach({
+            guard let data = try? JSONSerialization.data(withJSONObject: $0.value, options: [.fragmentsAllowed, .sortedKeys]) else {
+                return
+            }
+    
+            guard let obj = try? JSONDecoder().decode(T.self, from: data) else {
+                return
+            }
+            items.append(obj)
+        })
+        return items
     }
 }
 
