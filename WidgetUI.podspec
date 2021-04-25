@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "WidgetUI"
-  spec.version      = "1.0.9"
+  spec.version      = "1.0.10a"
   spec.summary      = "Powerful UIKit components to make your development faster."
 
   # This description is used to generate tags and improve search results.
@@ -80,7 +80,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/quacklabs/WidgetUI.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/quacklabs/WidgetUI.git", :branch "main", :tag => "#{spec.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
