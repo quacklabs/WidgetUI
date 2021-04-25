@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "WidgetUI"
-  spec.version      = "1.0.10a"
+  spec.version      = "1.0.10"
   spec.summary      = "Powerful UIKit components to make your development faster."
 
   # This description is used to generate tags and improve search results.
