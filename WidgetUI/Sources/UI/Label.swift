@@ -8,6 +8,8 @@
 
 import UIKit
 
+typealias Text = Label
+
 @IBDesignable
 public class Label: UILabel {
     
