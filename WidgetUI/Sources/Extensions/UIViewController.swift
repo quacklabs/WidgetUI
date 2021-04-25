@@ -68,7 +68,7 @@ public extension UIViewController {
         backButton.isUserInteractionEnabled = true
         (tintColor != nil) ? backButton.tintColor = tintColor! : ()
         backButton.willSetConstraints()
-        let title = Label(font: Font.heading.make(withSize: 18), content: title?.attributed ?? "".attributed, color: .black)
+        let title = Text(font: Font.heading.make(withSize: 18), content: title?.attributed ?? "".attributed, color: .black)
         title.sizeToFit()
         backView.addSubviews([backButton, title])
         view.addSubview(backView)
@@ -183,7 +183,7 @@ public extension UIViewController {
             if self.navigationController?.navigationBar != nil {
                 navigationItem.title = title
             } else {
-                let viewTitle = Label(font: Font.heading.make(withSize: 20).semibold, content: NSMutableAttributedString(string: title), color: .black)
+                let viewTitle = Text(font: Font.heading.make(withSize: 20).semibold, content: NSMutableAttributedString(string: title), color: .black)
                 self.view.addSubview(viewTitle)
                 NSLayoutConstraint.activate([
                     viewTitle.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),

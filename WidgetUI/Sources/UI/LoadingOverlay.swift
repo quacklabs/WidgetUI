@@ -14,7 +14,7 @@ open class LoadingOverlay {
     var overlayView : UIView!
     var activityIndicator : UIActivityIndicatorView
     lazy var title: Label! = {
-        let title = Label()
+        let title = Text()
         title.content = "Please wait...".attributed
         title.textColor = UIColor.black
         title.willSetConstraints()
