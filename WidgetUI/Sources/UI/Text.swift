@@ -8,10 +8,8 @@
 
 import UIKit
 
-typealias Text = Label
-
 @IBDesignable
-public class Label: UILabel {
+public class Text: UILabel {
     
     public var content: NSMutableAttributedString? {
         didSet {
