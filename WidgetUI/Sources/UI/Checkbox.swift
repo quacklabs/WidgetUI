@@ -1,6 +1,6 @@
 //
 //  Checkbox.swift
-//  PartyWise
+//  WidgetUI
 //
 //  Created by Mark Boleigha on 31/07/2020.
 //  Copyright © 2020 Sprinthub. MIT License

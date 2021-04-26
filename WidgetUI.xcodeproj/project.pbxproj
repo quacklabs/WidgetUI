@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,13 +21,16 @@
 		2545D48B24D4D60C0022DD8B /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2545D48424D4D60C0022DD8B /* Checkbox.swift */; };
 		2545D48D24D4D60C0022DD8B /* DeviceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2545D48624D4D60C0022DD8B /* DeviceType.swift */; };
 		2545D48E24D4D60C0022DD8B /* LoadingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2545D48724D4D60C0022DD8B /* LoadingOverlay.swift */; };
-		2545D48F24D4D60C0022DD8B /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2545D48824D4D60C0022DD8B /* Label.swift */; };
 		2545D49024D4D60C0022DD8B /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2545D48924D4D60C0022DD8B /* Date.swift */; };
 		25A3197E2477C3950006022F /* WidgetUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25A319742477C3950006022F /* WidgetUI.framework */; };
 		25A319832477C3950006022F /* WidgetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A319822477C3950006022F /* WidgetUITests.swift */; };
 		25A319852477C3950006022F /* WidgetUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 25A319772477C3950006022F /* WidgetUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		25BB215325311B68006954A8 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BB215225311B68006954A8 /* Style.swift */; };
 		4BDF494655C8D7BA55ECD262 /* Pods_WidgetUI_WidgetUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC719F07D11D391496180A06 /* Pods_WidgetUI_WidgetUITests.framework */; };
+		DE29611F2637054D00A811AE /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29611D2637054D00A811AE /* Text.swift */; };
+		DE2961202637054D00A811AE /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29611D2637054D00A811AE /* Text.swift */; };
+		DE2961212637054D00A811AE /* TextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29611E2637054D00A811AE /* TextInput.swift */; };
+		DE2961222637054D00A811AE /* TextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29611E2637054D00A811AE /* TextInput.swift */; };
 		E5B4ABFB42AF908438FBDF45 /* Pods_WidgetUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8D74489F6025996168D8E94 /* Pods_WidgetUI.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,7 +61,6 @@
 		2545D48424D4D60C0022DD8B /* Checkbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
 		2545D48624D4D60C0022DD8B /* DeviceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceType.swift; sourceTree = "<group>"; };
 		2545D48724D4D60C0022DD8B /* LoadingOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingOverlay.swift; sourceTree = "<group>"; };
-		2545D48824D4D60C0022DD8B /* Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 		2545D48924D4D60C0022DD8B /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		25A319742477C3950006022F /* WidgetUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WidgetUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		25A319772477C3950006022F /* WidgetUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WidgetUI.h; sourceTree = "<group>"; };
@@ -70,6 +72,8 @@
 		C8D74489F6025996168D8E94 /* Pods_WidgetUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WidgetUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC719F07D11D391496180A06 /* Pods_WidgetUI_WidgetUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WidgetUI_WidgetUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD1B4C144A3D48E2B8750E79 /* Pods-WidgetUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WidgetUI.debug.xcconfig"; path = "Target Support Files/Pods-WidgetUI/Pods-WidgetUI.debug.xcconfig"; sourceTree = "<group>"; };
+		DE29611D2637054D00A811AE /* Text.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
+		DE29611E2637054D00A811AE /* TextInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInput.swift; sourceTree = "<group>"; };
 		F216A4D0D27E92E3DFC33597 /* Pods-WidgetUI-WidgetUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WidgetUI-WidgetUITests.debug.xcconfig"; path = "Target Support Files/Pods-WidgetUI-WidgetUITests/Pods-WidgetUI-WidgetUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,11 +129,12 @@
 		2545D48224D4D5E40022DD8B /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				DE29611D2637054D00A811AE /* Text.swift */,
+				DE29611E2637054D00A811AE /* TextInput.swift */,
 				2545D48424D4D60C0022DD8B /* Checkbox.swift */,
 				2545D48624D4D60C0022DD8B /* DeviceType.swift */,
 				2545D48724D4D60C0022DD8B /* LoadingOverlay.swift */,
 				2545D48324D4D60C0022DD8B /* NSMutableAttributedString.swift */,
-				2545D48824D4D60C0022DD8B /* Label.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -189,7 +194,6 @@
 				F216A4D0D27E92E3DFC33597 /* Pods-WidgetUI-WidgetUITests.debug.xcconfig */,
 				1BD525A3AA8D22CF1E2498C9 /* Pods-WidgetUI-WidgetUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -384,13 +388,14 @@
 				2545D47D24D4D4900022DD8B /* UITapGestureRecognizer.swift in Sources */,
 				2545D48D24D4D60C0022DD8B /* DeviceType.swift in Sources */,
 				2545D47E24D4D4900022DD8B /* UIViewController.swift in Sources */,
+				DE2961212637054D00A811AE /* TextInput.swift in Sources */,
 				2545D47A24D4D4900022DD8B /* Array.swift in Sources */,
 				2545D49024D4D60C0022DD8B /* Date.swift in Sources */,
 				2545D47724D4D4900022DD8B /* UIView.swift in Sources */,
 				2545D47B24D4D4900022DD8B /* UIImage.swift in Sources */,
 				2545D48E24D4D60C0022DD8B /* LoadingOverlay.swift in Sources */,
 				2545D47C24D4D4900022DD8B /* UIButton.swift in Sources */,
-				2545D48F24D4D60C0022DD8B /* Label.swift in Sources */,
+				DE29611F2637054D00A811AE /* Text.swift in Sources */,
 				2545D48B24D4D60C0022DD8B /* Checkbox.swift in Sources */,
 				2545D47924D4D4900022DD8B /* Codable.swift in Sources */,
 				25BB215325311B68006954A8 /* Style.swift in Sources */,
@@ -403,7 +408,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE2961202637054D00A811AE /* Text.swift in Sources */,
 				25A319832477C3950006022F /* WidgetUITests.swift in Sources */,
+				DE2961222637054D00A811AE /* TextInput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
