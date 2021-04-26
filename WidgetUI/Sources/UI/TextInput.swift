@@ -8,7 +8,7 @@
 
 import UIKit
 
-open class TextInput: UITextField {
+public class TextInput: UITextField {
     
     var borderWidth: CGFloat = 1.0
     var border: CALayer!
@@ -30,7 +30,7 @@ open class TextInput: UITextField {
     
     let padding = UIEdgeInsets(top: 0, left: 12, bottom: 0, right: 12)
     
-    enum IconPosition {
+    public enum IconPosition {
         case left
         case right
     }
@@ -68,7 +68,7 @@ open class TextInput: UITextField {
         ])
     }
     
-    func underline(with color: UIColor? = nil, lineWidth: CGFloat?) {
+    public func underline(with color: UIColor? = nil, lineWidth: CGFloat?) {
         self.borderStyle = .none
         self.border = CALayer()
         border.borderColor = color?.cgColor ??  borderColor.cgColor
@@ -79,7 +79,7 @@ open class TextInput: UITextField {
         self.layer.masksToBounds = true
     }
     
-    func setIcon(_ image: UIImage, postion: IconPosition) {
+    public func setIcon(_ image: UIImage, postion: IconPosition) {
         let iconView = UIImageView(frame:
             CGRect(x: 10, y: 5, width: 14, height: 14))
         iconView.image = image
@@ -97,7 +97,7 @@ open class TextInput: UITextField {
         }
     }
     
-    func addViewPasswordButton() {
+    public func addViewPasswordButton() {
         self.button.imageView!.contentMode = .scaleAspectFit
         self.button.setImage(UIImage(named: "ic_reveal"), for: .normal)
         self.button.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
