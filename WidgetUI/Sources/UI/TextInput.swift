@@ -14,7 +14,7 @@ public class TextInput: UITextField {
     var border: CALayer!
     var borderColor: UIColor = .lightGray
     
-    lazy var errorLabel: Text = {
+    public lazy var errorLabel: Text = {
         let txt = Text(font: Font.body.make(withSize: 12), content: nil, color: UIColor.red)
         txt.sizeToFit()
         txt.willSetConstraints()
